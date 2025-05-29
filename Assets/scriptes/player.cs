@@ -36,15 +36,24 @@ public class player : MonoBehaviour
         }
         if (playerinput != Vector2.zero)
         {
-            animator.SetBool("isRun", true);
+            animator.SetBool("isrun", true);
         }
         else
         {
-            animator.SetBool("isRun", false);
+            animator.SetBool("isrun", false);
         }
 
 
 
     }
+    public void takedame()
+    {
+        die();
+    }
+    private void die()
+    {
+        Destroy(gameObject);
+    }
+    
 }
-//test comment
+
